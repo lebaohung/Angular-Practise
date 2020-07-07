@@ -8,6 +8,7 @@ import { FormsModule } from "@angular/forms";
 import { HackernewsComponent } from './PractiseOnDemoBase/hackernews.component';
 import { PetComponent } from './pet/pet.component';
 import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NameCardComponent } from './name-card/name-card.component';
     FontSizeEditorComponent,
     HackernewsComponent,
     PetComponent,
-    NameCardComponent
+    NameCardComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
