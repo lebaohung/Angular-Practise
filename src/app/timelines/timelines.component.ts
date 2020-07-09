@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DateUtilService} from "../date-util.service";
+import {DateUtilService} from "../services/date-util.service";
 
 @Component({
   selector: 'app-timelines',

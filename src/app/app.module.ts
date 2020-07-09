@@ -11,6 +11,8 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { TimelinesComponent } from './timelines/timelines.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
+import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
+import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {AppRoutingModule} from "./app-routing/app-routing.module";
     PetComponent,
     NameCardComponent,
     ProgressBarComponent,
-    TimelinesComponent
+    TimelinesComponent,
+    YoutubePlaylistComponent,
+    YoutubePlayerComponent
   ],
   imports: [
     BrowserModule,
