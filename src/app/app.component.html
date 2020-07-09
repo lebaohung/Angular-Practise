@@ -5,9 +5,22 @@
   </h1>
 
 </div>
-
+<h1
+  [textContent]="title"
+  [ngClass]="{ 'with-border' : withBorder}"
+  [style.color]="textColor"
+  (mouseover)= "onMouseTextOver()"
+  (mouseout)= "onMouseTextOut()"
+>
+</h1>
+<button (click)="onClickButton($event)">{{withBorder ? 'Hide' : 'Show'}} border</button>
 <!--<app-font-size-editor></app-font-size-editor>-->
 <!--<app-hackernews (onclickShowButton)="showArticleContent($event)"></app-hackernews>-->
+<!--<app-name-card cardName="danhwith" email="prodev@abc.xyz" phone="0123456789"></app-name-card>-->
 <!--<app-pet></app-pet>-->
-<app-name-card cardName="Professional Dev" email="prodev@abc.xyz" phone="0123456789"></app-name-card>
+<!--<app-progress-bar width="65"></app-progress-bar>-->
+<nav>
+  <a routerLink="timelines" class="link">Life Time Counting Application</a>
+</nav>
+<router-outlet></router-outlet>
 

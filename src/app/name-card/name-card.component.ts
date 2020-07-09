@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-name-card',
@@ -11,9 +12,11 @@ export class NameCardComponent implements OnInit {
   @Input() email: string;
   @Input() phone: string;
 
-  constructor() { }
+  constructor(private _dataService: DataService) { }
 
   ngOnInit(): void {
+    this._dataService.setPetNameFromPet(this.cardName);
+    // this._dataService.petNameFromPet$.subscribe(value => this.cardName = value);
   }
 
 }

@@ -1,0 +1,4 @@
+.with-border {
+  border-radius: 0.25rem;
+  border: 2px tomato solid;
+}

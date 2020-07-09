@@ -9,6 +9,8 @@ import { HackernewsComponent } from './PractiseOnDemoBase/hackernews.component';
 import { PetComponent } from './pet/pet.component';
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { TimelinesComponent } from './timelines/timelines.component';
+import {AppRoutingModule} from "./app-routing/app-routing.module";
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     HackernewsComponent,
     PetComponent,
     NameCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    TimelinesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
