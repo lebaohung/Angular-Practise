@@ -13,6 +13,8 @@ import { TimelinesComponent } from './timelines/timelines.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import {ImageGalleryModule} from "./image-gallery/image-gallery.module";
+import {GalleryConfig} from "./image-gallery/token";
 
 @NgModule({
   declarations: [
@@ -30,9 +32,12 @@ import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ImageGalleryModule
   ],
-  providers: [],
+  providers: [{
+    provide: GalleryConfig, useValue: 2
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
