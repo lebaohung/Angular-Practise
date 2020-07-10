@@ -15,6 +15,7 @@ import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.co
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 import {ImageGalleryModule} from "./image-gallery/image-gallery.module";
 import {GalleryConfig} from "./image-gallery/token";
+import {ImgSliderModule} from "./img-slider/img-slider.module";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {GalleryConfig} from "./image-gallery/token";
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ImageGalleryModule
+    ImageGalleryModule,
+    ImgSliderModule
   ],
   providers: [{
     provide: GalleryConfig, useValue: 2
