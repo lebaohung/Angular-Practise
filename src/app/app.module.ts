@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ColorComponent } from './color/color.component';
 import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
-import { FormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HackernewsComponent } from './PractiseOnDemoBase/hackernews.component';
 import { PetComponent } from './pet/pet.component';
 import { NameCardComponent } from './name-card/name-card.component';
@@ -16,6 +16,10 @@ import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen
 import {ImageGalleryModule} from "./image-gallery/image-gallery.module";
 import {GalleryConfig} from "./image-gallery/token";
 import {ImgSliderModule} from "./img-slider/img-slider.module";
+import { BlogComponent } from './blog/blog.component';
+import { BlogEditComponent } from './blog-edit/blog-edit.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,18 +32,22 @@ import {ImgSliderModule} from "./img-slider/img-slider.module";
     ProgressBarComponent,
     TimelinesComponent,
     YoutubePlaylistComponent,
-    YoutubePlayerComponent
+    YoutubePlayerComponent,
+    BlogComponent,
+    BlogEditComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     ImageGalleryModule,
-    ImgSliderModule
+    ImgSliderModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [{
-    provide: GalleryConfig, useValue: 2
-  }],
+  // providers: [{
+  // }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

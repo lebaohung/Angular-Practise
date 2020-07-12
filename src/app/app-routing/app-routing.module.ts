@@ -4,6 +4,9 @@ import {PreloadAllModules, Route, RouterModule, Routes} from "@angular/router";
 import {TimelinesComponent} from "../timelines/timelines.component";
 import {YoutubePlaylistComponent} from "../youtube-playlist/youtube-playlist.component";
 import {YoutubePlayerComponent} from "../youtube-player/youtube-player.component";
+import {BlogComponent} from "../blog/blog.component";
+import {BlogEditComponent} from "../blog-edit/blog-edit.component";
+import {BlogDetailComponent} from "../blog-detail/blog-detail.component";
 
 const  routes : Routes = [
   {
@@ -17,13 +20,24 @@ const  routes : Routes = [
       path: ':id',
       component: YoutubePlayerComponent
     }]
-  }
+  },
+  {
+    path: 'blog',
+    component: BlogComponent
+  },
+  {
+    path: 'blog/:id',
+    component: BlogDetailComponent
+  },
+  {
+    path: 'blog/:id/edit',
+    component: BlogEditComponent
+  },
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
