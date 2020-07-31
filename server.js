@@ -13,10 +13,10 @@ const forceSSL = function () {
     next();
   }
 };
-app.use(express.static('./dist/{{angular-practise2}}'));
+app.use(express.static('./dist/{{AngularPractise2}}'));
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname,'/dist/{{angular-practise2}}/index.html'));
+  res.sendFile(path.join(__dirname,'/dist/{{AngularPractise2}}/index.html'));
 });
 
 app.use(forceSSL());
